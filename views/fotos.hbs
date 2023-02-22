@@ -30,6 +30,19 @@
                 <a href="/fotos/update/{{id}}">
                     <button>editar</button>
                 </a>
+
+                <a href="/fotos/comentario/{{id}}">
+                    <button>comentar</button>
+                </a>
+
+                {{!-- si existe un comentario para esta iteracion se mostrará --}}
+                {{#if result2[id]}}
+                
+                    <h2>
+                        {{result2[id].coment}}
+                    </h2>
+
+                {{/if}}
             </div>
         {{/each}}
     </section>

@@ -7,12 +7,14 @@ const pool = mysql.createPool({
     database:"bzcvslh9cpp6tdzsqeif"
 })
 
-// let datos = {url:"xx",titulo:"locoo",likes:10,dislikes:9}
+// let datos = {url:"xx",titulo:"locoo222",likes:10,dislikes:9}
 
 // let con = async () =>{
 //     console.log(await pool.query("insert into fotos set ?",[datos]))
 // } 
 
 // con()
+
+
 
 module.exports = pool

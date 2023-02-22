@@ -17,6 +17,7 @@ var authrouter = require("./routes/auth")
 
 var app = express();
 
+
 require("./lib/passport")
 
 app.use(ex_sess({
@@ -36,8 +37,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(passport.initialize())
-app.use(passport.session())
+// app.use(passport.initialize())
+// app.use(passport.session())
 
 app.use(flash())
 

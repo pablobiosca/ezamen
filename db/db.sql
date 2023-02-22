@@ -9,8 +9,7 @@ create table fotos (
     fecha timestamp not null default current_timestamp,
     likes int,
     dislikes int,
-    id_user int,
-    foreign key (id_user) references users(id),
+    id_user int
 );
 
 create table users (

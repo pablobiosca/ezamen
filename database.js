@@ -1,10 +1,10 @@
 const mysql = require("mysql2/promise")
 
 const pool = mysql.createPool({
-    host:"localhost",
-    password:"1234",
-    user:"root",
-    database:"fotos"
+    host:"bzcvslh9cpp6tdzsqeif-mysql.services.clever-cloud.com",
+    password:"v2L0hwnf0QvwJj2RgDVC",
+    user:"u4ffzd7fekuncb52",
+    database:"bzcvslh9cpp6tdzsqeif"
 })
 
 // let datos = {url:"xx",titulo:"locoo",likes:10,dislikes:9}

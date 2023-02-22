@@ -23,5 +23,13 @@ router.get('/login', function(req, res, next) {
 
 });
 
+router.post('/registro',passport.authenticate("local.login", {
+
+    successRedirect:"/fotos",
+    failureRedirect:"/login",
+    failureFlash:true
+
+}));
+
 
 module.exports = router;

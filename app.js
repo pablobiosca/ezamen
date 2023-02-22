@@ -42,6 +42,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(flash())
 
+app.use( (req,res,next) =>{
+  app.locals.success = req.flash("success")
+  app.locals.message = req.flash("message")
+  app.locals.user = req.user
+  next()
+})
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/foticos.css">
     <title>Document</title>
 </head>
 <body>
 
+    <section>
+        {{#each result}}
+            <div>
+                <img src="{{url}}" alt="">
+                <h3>{{titulo}}</h3>
+                <h5>LIKES</h5>
+                <a href="/fotos/like/{{id}}">
+                    <h4>{{likes}}</h4>
+                </a>
+                <h5>DISLIKES</h5>
+                <a href="/fotos/dislike/{{id}}">
+                    <h4>{{dislikes}}</h4>
+                </a>
 
-    {{#each result}}
-        <img src="{{url}}" alt="">
-        <h3>{{titulo}}</h3>
-        <a href="/fotos/like/{{id}}">
-            <h4>{{likes}}</h4>
-        </a>
-        <a href="/fotos/dislike/{{id}}">
-            <h4>{{dislikes}}</h4>
-        </a>
+                <a href="/fotos/delete/{{id}}">
+                    <button>borrar</button>
+                </a>
 
-        <a href="/fotos/delete/{{id}}">
-            <button>borrar</button>
-        </a>
-
-        <a href="/fotos/update/{{id}}">
-            <button>editar</button>
-        </a>
-
-    {{/each}}
+                <a href="/fotos/update/{{id}}">
+                    <button>editar</button>
+                </a>
+            </div>
+        {{/each}}
+    </section>
 </body>
 </html>

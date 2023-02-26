@@ -11,7 +11,7 @@ if (process.env.NODE_ENV=="develop"){
         password:"1234",
         user:"root",
         database:"fotos",
-        port:9900
+        port:3306
     })
     
 }else{
@@ -24,13 +24,13 @@ if (process.env.NODE_ENV=="develop"){
 }
 
 
-let datos = {url:"xx",titulo:"locoo222",likes:10,dislikes:9}
+// let datos = {url:"xx",titulo:"locoo222",likes:10,dislikes:9}
 
-let con = async () =>{
-    console.log(await pool.query("insert into fotos set ?",[datos]))
-} 
+// let con = async () =>{
+//     console.log(await pool.query("insert into fotos set ?",[datos]))
+// } 
 
-con()
+// con()
 
 
 
